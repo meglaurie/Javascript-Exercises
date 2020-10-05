@@ -15,6 +15,8 @@ var seconds = date.getSeconds();
 // Sets am or pm with ternary if statement
 var prepand = (hour >= 12)? " PM " : " AM ";
 
+var root = document.getElementById('root');
+
 // Sets 12 hour clock from 24
 hour = (hour>=12)? hour - 12 : hour;
 
@@ -42,6 +44,8 @@ if (minutes < 10){
   minutes = "0" + minutes;
 }
 
+document.getElementById('root').innerHTML = "Today is : " + dayList[day] + ". Current time : "+ hour + " : " + minutes + " : " + seconds + prepand;
 
+console.log(root);
 
 console.log("Current time : "+ hour + " : " + minutes + " : " + seconds + prepand);
