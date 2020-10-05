@@ -38,11 +38,8 @@ if (hour === 0 && prepand === ' AM'){
   }
 }
 
-// foo = "Current time : "+ hour + prepand + " : " + minutes + " : " + seconds;
-//
-// function output(){
-//   return document.getElementById("root").innerHTML = foo;
-// }
-// output();
+if (minutes < 10){
+  minutes = "0" + minutes;
+}
 
-console.log("Current time : "+ hour + prepand + " : " + minutes + " : " + seconds);
+console.log("Current time : "+ hour + " : " + minutes + " : " + seconds + prepand);
