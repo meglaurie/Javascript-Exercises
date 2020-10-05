@@ -42,4 +42,6 @@ if (minutes < 10){
   minutes = "0" + minutes;
 }
 
+
+
 console.log("Current time : "+ hour + " : " + minutes + " : " + seconds + prepand);
