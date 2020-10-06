@@ -7,16 +7,12 @@ var date = new Date();
 var day = date.getDay();
 // Days of the week array
 var dayList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-console.log("Today is : " + dayList[day] + ".");
-// Comment
+// create vars for time
 var hour = date.getHours();
 var minutes = date.getMinutes();
 var seconds = date.getSeconds();
 // Sets am or pm with ternary if statement
 var prepand = (hour >= 12)? " PM " : " AM ";
-
-var root = document.getElementById('root');
-
 // Sets 12 hour clock from 24
 hour = (hour>=12)? hour - 12 : hour;
 
@@ -29,7 +25,6 @@ if(hour === 0 && second === 0){
     prepand = ' PM';
   }
 }
-
 if (hour === 0 && prepand === ' AM'){
   if(minutes === 0 && seconds === 0){
     hour = 12;
@@ -39,13 +34,8 @@ if (hour === 0 && prepand === ' AM'){
     prepand = ' AM';
   }
 }
-
 if (minutes < 10){
   minutes = "0" + minutes;
 }
 
 document.getElementById('root').innerHTML = "Today is : " + dayList[day] + ". Current time : "+ hour + " : " + minutes + " : " + seconds + prepand;
-
-console.log(root);
-
-console.log("Current time : "+ hour + " : " + minutes + " : " + seconds + prepand);
