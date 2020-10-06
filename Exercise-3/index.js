@@ -9,5 +9,9 @@ if(today.getMonth()==11 && today.getDate()>25)
 
 var oneDay = 1000*60*60*24;
 
-console.log(Math.ceil((xmas.getTime()-today.getTime())/(oneDay)) +
+var foo = Math.ceil((xmas.getTime()-today.getTime())/(oneDay));
+
+console.log(foo +
 " days left until Christmas!");
+
+document.getElementById('root').innerHTML = foo + " days left until Christmas!";
