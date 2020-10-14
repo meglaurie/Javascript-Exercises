@@ -1,6 +1,9 @@
 function fizzBuzz(){
-  var result = "", x,y,z;
-  for(var z = 1; z <= 100; z++){
+  var result = "";
+  var x;
+  var y;
+  var z;
+  for(z = 1; z <= 100; z++){
     x = z%3 == 0;
     y = z%5 == 0;
     if( x ) {
@@ -8,12 +11,12 @@ function fizzBuzz(){
     } if ( y ) {
       result += "Buzz";
     } if (!(x||y)){
-      result +=z;
+      result += z;
     }
     result +='\n';
     console.log(result);
   }
-  document.getElementById('root').innerHTML = result;
+  document.getElementById('root').write(result);
 }
 
 fizzBuzz();
