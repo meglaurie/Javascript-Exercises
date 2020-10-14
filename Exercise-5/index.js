@@ -16,7 +16,7 @@ function fizzBuzz(){
     result +='\n';
     console.log(result);
   }
-  document.getElementById('root').write(result);
+  document.getElementById('root').innerHTML = result;
 }
 
 fizzBuzz();
