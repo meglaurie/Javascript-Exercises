@@ -2,16 +2,15 @@ function fizzBuzz(){
   var result = "";
   var x;
   var y;
-  var z;
-  for(z = 1; z <= 100; z++){
-    x = z%3 == 0;
-    y = z%5 == 0;
+  for(var i = 1; i <= 100; i++){
+    x = i%3 == 0;
+    y = i%5 == 0;
     if( x ) {
       result += "Fizz";
     } if ( y ) {
       result += "Buzz";
     } if (!(x||y)){
-      result += z;
+      result += i;
     }
     result +='\n';
     console.log(result);
