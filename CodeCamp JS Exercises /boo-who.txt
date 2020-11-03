@@ -1,0 +1,10 @@
+function booWho(bool) {
+  if(bool === true){
+    return true
+  }if(bool === false){
+    return true
+  }
+  return false;
+}
+
+booWho(null);
