@@ -1,0 +1,13 @@
+// Only change code below this line
+function urlSlug(title) {
+var newArr = title
+.split(/\W/)
+.filter(obj => { 
+    return obj !== "" 
+  })
+.join("-")
+.toLowerCase();
+return newArr;
+}
+// Only change code above this line
+console.log(urlSlug("Winter Is Coming"));
