@@ -48,7 +48,6 @@ function deleteCheck(event){
     const todo = item.parentElement;
   //Animation
     todo.classList.add("fall");
-    console.log("fall");
     todo.addEventListener('transitionend', function(){
       console.log("removed");
       todo.remove();
@@ -63,10 +62,10 @@ function deleteCheck(event){
 
 }
 
-function filterToDo(e){
+function filterToDo(event){
   const todos = todoList.childNodes;
   todos.forEach(function(todo){
-    switch(e.target.value){
+    switch(event.target.value){
       case "all":
         // todo.style.display = "flex";
         break;
