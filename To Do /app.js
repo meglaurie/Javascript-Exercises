@@ -25,7 +25,6 @@ function addToDo(event){
   todoDiv.appendChild(newToDo);
   //ADD to local localStorage
   saveLocalToDos(todoInput.value);
-  console.log("saved");
   //Check todoButton
   const completeButton = document.createElement('button');
   completeButton.innerHTML = "<i class='fas fa-check'></i>";
@@ -54,7 +53,6 @@ function deleteCheck(event){
     todo.classList.add("fall");
     removeLocalToDos(todo);
     todo.addEventListener('transitionend', function(){
-      console.log("removed");
       todo.remove();
     });
   }
