@@ -4,11 +4,11 @@ const todoButton = document.querySelector('.to-do-btn');
 const todoList = document.querySelector('.to-do-list');
 const filterOption = document.querySelector('.filter')
 
+
 //Event Lsitener
 todoButton.addEventListener('click', addToDo);
 todoList.addEventListener('click', deleteCheck);
 filterOption.addEventListener('click', filterToDo);
-document.addEventListener('DOMContentLoaded', getToDOs);
 
 //Functions
 function addToDo(event){
@@ -148,4 +148,18 @@ function removeLocalToDos(todo){
   const todoIndex = todo.children[0].innerText;
   todos.splice(todos.indexOf(todoIndex), 1);
   localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+
+//SVG functions
+document.addEventListener('DOMContentLoaded', getToDOs);
+const plants = document.querySelectorAll('svg');
+
+
+function growPlant(){
+  let stage = plants.dataset.stage;
+  if(stage < 11){
+      playTimeline(stage);
+      stage = stage + 1;
+  }
 }
