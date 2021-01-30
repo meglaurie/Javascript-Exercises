@@ -29,6 +29,40 @@ function growPlant() {
 	}
 }
 
+function changeMotivation(number) {
+	switch (number) {
+		case 1:
+			return "Just. Do. It.";
+			break;
+		case 2:
+			return "Keep moving. Keep hustling.";
+			break;
+		case 3:
+			return "So productive, I can't even.";
+			break;
+		case 4:
+			return "Yeah, you go, Glen Coco.";
+			break;
+		case 5:
+			return "You got this!";
+			break;
+		case 6:
+			return "Productivity is your middle name.";
+			break;
+		case 7:
+			return "DJ Khaled: Another one!";
+			break;
+		case 8:
+			return "You're almost there...";
+			break;
+		case 9:
+			return "One more for good measure.";
+			break;
+		case 10:
+			return "Ta-da!";
+			break;
+	}
+}
 
 $("#todos").on("click", "label", function () {
 	$(this).closest("li").toggleClass("done");
