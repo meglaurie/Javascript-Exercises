@@ -20,8 +20,7 @@ function computerPlay() {
 }
 
 
-var playerSelection = 'ROCK';
-var computerSelection = computerPlay();
+
 
 
 function playRound(playerSelection, computerSelection){
@@ -41,11 +40,29 @@ function playRound(playerSelection, computerSelection){
             console.log("computer wins");
         }
 
+
+
     }
-    
-    
-console.log("player: " + playerSelection);
-console.log("computer: " + computerSelection);
 
 
-playRound(playerSelection, computerSelection);
+function game(){
+    for(i = 0; i < 6; i++){
+        var playerSelection = prompt("Rock, paper, scissors?");
+        var computerSelection = computerPlay();
+        if(i < 5){
+         playRound(playerSelection, computerSelection);
+         console.log("player: " + playerSelection);
+         console.log("computer: " + computerSelection);
+        }
+        else{
+            console.log("Game Over")
+        }
+    }
+}
+
+
+
+    
+
+game(); 
+
