@@ -22,10 +22,11 @@ function computerPlay() {
 
 
 
-
 function playRound(playerSelection, computerSelection){
     playerSelection = playerSelection.toLowerCase();
-
+    // if( playerSelection != 'rock' || 'paper' || 'scissors'){
+    //     prompt('error please enter rock paper or scissors.');
+    // }
    
     if(playerSelection ==  computerSelection){
         console.log('tie');
@@ -40,10 +41,13 @@ function playRound(playerSelection, computerSelection){
             console.log("computer wins");
         }
 
-
+    
 
     }
 
+
+
+    
 
 function game(){
     for(i = 0; i < 6; i++){
@@ -59,10 +63,7 @@ function game(){
         }
     }
 }
-
-
-
-    
+ 
 
 game(); 
 
