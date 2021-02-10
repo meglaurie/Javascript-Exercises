@@ -24,25 +24,47 @@ const container = document.querySelector('#container');
 const rockBtn = document.createElement('button');
 const paperBtn = document.createElement('button');
 const scissorsBtn = document.createElement('button');
-const btn = document.querySelectorAll('button');
+const btns = document.querySelectorAll('button');
+const allBtns = document.querySelectorAll('button'); 
 
 rockBtn.value = 'rock';
+paperBtn.value = 'paper';
+scissorsBtn.value = 'scissors';
+
 rockBtn.classList.add('button');
-rockBtn.textContent = 'rock';
-paperBtn.textContent = 'paper';
 paperBtn.classList.add('button');
-scissorsBtn.textContent = 'scissors';
 scissorsBtn.classList.add('button');
 
+rockBtn.textContent = 'rock';
+paperBtn.textContent = 'paper';
+scissorsBtn.textContent = 'scissors';
 
 container.appendChild(rockBtn);
 container.appendChild(paperBtn);
 container.appendChild(scissorsBtn);
 
 
-container.addEventListener('click', (e) =>{
-    console.log('clicked');
-});
+function btnVal (){
+    for( var i = 0; i < allBtns.length; i++){
+        allBtns[i].addEventListener('clicked', function(){
+            console.log('clicked');
+        });
+    }
+}
+
+btnVal();
+
+
+// btns.forEach((btn) =>{
+//     btn.addEventListener('click', (e) =>{
+//         var playerChoice = btnsVal;
+//         console.log(playerChoice);
+//         console.log(e.target);
+//         console.log('clicked');
+//     });
+
+// })
+
 
 // btn.addEventListener('click', (e) =>{
 //     e.target.style.background = 'blue';
@@ -72,9 +94,6 @@ function playRound(playerSelection, computerSelection){
     
 
     }
-
-
-
     
 
 // function game(){
@@ -105,5 +124,5 @@ function game(){
     
 }
 
-game(); 
+// game(); 
 
