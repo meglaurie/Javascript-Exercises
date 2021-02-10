@@ -20,6 +20,14 @@ function computerPlay() {
 }
 
 
+const container = document.querySelector('container');
+const rockBtn = document.createElement('btn');
+const paperBtn = document.createElement('btn');
+const scissorsBtn = document.createElement('btn');
+
+div.appendChild(rockBtn);
+div.appendChild(paperBtn);
+div.appendChild(scissorsBtn);
 
 
 function playRound(playerSelection, computerSelection){
@@ -49,21 +57,33 @@ function playRound(playerSelection, computerSelection){
 
     
 
+// function game(){
+//     for(i = 0; i < 6; i++){
+//         var playerSelection = prompt("Rock, paper, scissors?");
+//         var computerSelection = computerPlay();
+//         if(i < 5){
+//          playRound(playerSelection, computerSelection);
+//          console.log("player: " + playerSelection);
+//          console.log("computer: " + computerSelection);
+//         }
+//         else{
+//             console.log("Game Over")
+//         }
+//     }
+// }
+ 
+
 function game(){
-    for(i = 0; i < 6; i++){
+    
         var playerSelection = prompt("Rock, paper, scissors?");
         var computerSelection = computerPlay();
-        if(i < 5){
+       
          playRound(playerSelection, computerSelection);
          console.log("player: " + playerSelection);
          console.log("computer: " + computerSelection);
-        }
-        else{
-            console.log("Game Over")
-        }
-    }
+        
+    
 }
- 
 
 game(); 
 
