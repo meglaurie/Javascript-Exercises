@@ -20,15 +20,35 @@ function computerPlay() {
 }
 
 
-const container = document.querySelector('container');
-const rockBtn = document.createElement('btn');
-const paperBtn = document.createElement('btn');
-const scissorsBtn = document.createElement('btn');
+const container = document.querySelector('#container');
+const rockBtn = document.createElement('button');
+const paperBtn = document.createElement('button');
+const scissorsBtn = document.createElement('button');
+const btn = document.querySelectorAll('button');
 
-div.appendChild(rockBtn);
-div.appendChild(paperBtn);
-div.appendChild(scissorsBtn);
+rockBtn.value = 'rock';
+rockBtn.classList.add('button');
+rockBtn.textContent = 'rock';
+paperBtn.textContent = 'paper';
+paperBtn.classList.add('button');
+scissorsBtn.textContent = 'scissors';
+scissorsBtn.classList.add('button');
 
+
+container.appendChild(rockBtn);
+container.appendChild(paperBtn);
+container.appendChild(scissorsBtn);
+
+
+container.addEventListener('click', (e) =>{
+    console.log('clicked');
+});
+
+// btn.addEventListener('click', (e) =>{
+//     e.target.style.background = 'blue';
+//     console.log(e);
+//   });
+  
 
 function playRound(playerSelection, computerSelection){
     playerSelection = playerSelection.toLowerCase();
