@@ -63,21 +63,22 @@ container.appendChild(div);
 
 var playerScore = 0;
 var compScore = 0;  
+var roundNum = 0;
 
 function playRound(playerSelection, computerSelection){
-    playerSelection = playerSelection.toLowerCase();
-    // if( playerSelection != 'rock' || 'paper' || 'scissors'){
-    //     prompt('error please enter rock paper or scissors.');
-    // }
    
     if(playerSelection ==  computerSelection){
         score.textContent = 'tie';
+       
+     
     }else if((playerSelection == 'rock' && computerSelection == 'scissors') ||
     (playerSelection == 'paper' && computerSelection == 'rock') ||
     (playerSelection == 'scissors' && computerSelection == 'paper')){
         score.textContent = "player wins";
         playerScore ++;
+      
         console.log("player score " + playerScore);
+
 
     }else if((playerSelection == 'rock' && computerSelection == 'paper') ||
         (playerSelection == 'paper' && computerSelection == 'scissors') ||
@@ -86,27 +87,28 @@ function playRound(playerSelection, computerSelection){
             score.textContent = "computer wins";
             compScore ++;
             console.log("comp score " + compScore);
+     
         }
 
-    
-
+     roundNum ++ ;
+     console.log(roundNum);
     }
 
-
-
-
 function game(){
+
+    
     
         var playerSelection = this.value;
         var computerSelection = computerPlay();
-       
-         playRound(playerSelection, computerSelection);
-         playerChoice.textContent = "player: " + playerSelection;
-         compChoice.textContent = "computer: " + computerSelection;
-        
-         if( playerScore || compScore == 5 ){
-            console.log('game over')
-        }
+
+         if(roundNum <= 5){
+            playRound(playerSelection, computerSelection);
+            playerChoice.textContent = "player: " + playerSelection;
+            compChoice.textContent = "computer: " + computerSelection;
+         }else{
+             console.log('game over');
+         }
+    
     
 }
 
