@@ -25,7 +25,7 @@ const rockBtn = document.createElement('button');
 const paperBtn = document.createElement('button');
 const scissorsBtn = document.createElement('button');
 const btns = document.querySelectorAll('button');
-const allBtns = document.querySelectorAll('button'); 
+let allBtns = document.querySelectorAll('.button'); 
 
 rockBtn.value = 'rock';
 paperBtn.value = 'paper';
@@ -39,37 +39,32 @@ rockBtn.textContent = 'rock';
 paperBtn.textContent = 'paper';
 scissorsBtn.textContent = 'scissors';
 
+
+
 container.appendChild(rockBtn);
 container.appendChild(paperBtn);
 container.appendChild(scissorsBtn);
 
 
-function btnVal (){
-    for( var i = 0; i < allBtns.length; i++){
-        allBtns[i].addEventListener('clicked', function(){
-            console.log('clicked');
-        });
-    }
-}
 
-btnVal();
+rockBtn.addEventListener('click', game);
+paperBtn.addEventListener('click', game);
+scissorsBtn.addEventListener('click', game);
 
+const div = document.createElement('div');
+const playerChoice = document.createElement('p');
+const compChoice = document.createElement('p');
+const round = document.createElement('p');
+const score = document.createElement('p');
 
-// btns.forEach((btn) =>{
-//     btn.addEventListener('click', (e) =>{
-//         var playerChoice = btnsVal;
-//         console.log(playerChoice);
-//         console.log(e.target);
-//         console.log('clicked');
-//     });
+div.appendChild(playerChoice);
+div.appendChild(compChoice);
+div.appendChild(round);
+div.appendChild(score);
 
-// })
+container.appendChild(div);
 
 
-// btn.addEventListener('click', (e) =>{
-//     e.target.style.background = 'blue';
-//     console.log(e);
-//   });
   
 
 function playRound(playerSelection, computerSelection){
@@ -77,6 +72,9 @@ function playRound(playerSelection, computerSelection){
     // if( playerSelection != 'rock' || 'paper' || 'scissors'){
     //     prompt('error please enter rock paper or scissors.');
     // }
+
+    var playerScore = 0;
+    var compScore = 0;
    
     if(playerSelection ==  computerSelection){
         console.log('tie');
@@ -84,26 +82,34 @@ function playRound(playerSelection, computerSelection){
     (playerSelection == 'paper' && computerSelection == 'rock') ||
     (playerSelection == 'scissors' && computerSelection == 'paper')){
         console.log("player wins");
+        score.textContent = "player wins";
+        playerScore + 1;
+        console.log("player score " + playerScore);
 
     }else if((playerSelection == 'rock' && computerSelection == 'paper') ||
         (playerSelection == 'paper' && computerSelection == 'scissors') ||
         (playerSelection == 'scissors' && computerSelection == 'rock')){
             console.log("computer wins");
+            score.textContent = "computer wins";
+            compScore + 1;
+            console.log("comp score " + compScore);
         }
 
     
 
     }
+
     
 
 // function game(){
 //     for(i = 0; i < 6; i++){
-//         var playerSelection = prompt("Rock, paper, scissors?");
+//         var playerSelection = this.value;
 //         var computerSelection = computerPlay();
+    
 //         if(i < 5){
-//          playRound(playerSelection, computerSelection);
-//          console.log("player: " + playerSelection);
-//          console.log("computer: " + computerSelection);
+//             playRound(playerSelection, computerSelection);
+//             playerChoice.textContent = "player: " + playerSelection;
+//             compChoice.textContent = "player: " + computerSelection;
 //         }
 //         else{
 //             console.log("Game Over")
@@ -112,17 +118,18 @@ function playRound(playerSelection, computerSelection){
 // }
  
 
+
+
 function game(){
     
-        var playerSelection = prompt("Rock, paper, scissors?");
+        var playerSelection = this.value;
         var computerSelection = computerPlay();
        
          playRound(playerSelection, computerSelection);
-         console.log("player: " + playerSelection);
-         console.log("computer: " + computerSelection);
+         playerChoice.textContent = "player: " + playerSelection;
+         compChoice.textContent = "player: " + computerSelection;
         
     
 }
 
-// game(); 
 
