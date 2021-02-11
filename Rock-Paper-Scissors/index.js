@@ -128,20 +128,3 @@ function game(){
 
 
 
-// function game(){
-//     for(i = 0; i < 6; i++){
-//         var playerSelection = this.value;
-//         var computerSelection = computerPlay();
-    
-//         if(i < 5){
-//             playRound(playerSelection, computerSelection);
-//             playerChoice.textContent = "player: " + playerSelection;
-//             compChoice.textContent = "player: " + computerSelection;
-//         }
-//         else{
-//             console.log("Game Over")
-//         }
-//     }
-// }
-
-
