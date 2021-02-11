@@ -52,11 +52,13 @@ const playerChoice = document.createElement('p');
 const compChoice = document.createElement('p');
 const round = document.createElement('p');
 const score = document.createElement('p');
+const result = document.createElement('p');
 
 div.appendChild(playerChoice);
 div.appendChild(compChoice);
 div.appendChild(round);
 div.appendChild(score);
+div.appendChild(result);
 
 container.appendChild(div);
 
@@ -68,13 +70,13 @@ var roundNum = 0;
 function playRound(playerSelection, computerSelection){
    
     if(playerSelection ==  computerSelection){
-        score.textContent = 'tie';
+        score.textContent = 'tied round';
        
      
     }else if((playerSelection == 'rock' && computerSelection == 'scissors') ||
     (playerSelection == 'paper' && computerSelection == 'rock') ||
     (playerSelection == 'scissors' && computerSelection == 'paper')){
-        score.textContent = "player wins";
+        score.textContent = "player wins this round";
         playerScore ++;
       
         console.log("player score " + playerScore);
@@ -84,7 +86,7 @@ function playRound(playerSelection, computerSelection){
         (playerSelection == 'paper' && computerSelection == 'scissors') ||
         (playerSelection == 'scissors' && computerSelection == 'rock')){
            
-            score.textContent = "computer wins";
+            score.textContent = "computer wins this round";
             compScore ++;
             console.log("comp score " + compScore);
      
@@ -94,23 +96,36 @@ function playRound(playerSelection, computerSelection){
      console.log(roundNum);
     }
 
+
+    function winner(){
+        if( playerScore > compScore){
+            result.textContent = "Player Wins!";
+        }if(playerScore < compScore){
+            result.textContent = "Computer Wins!";
+        }if(playerScore == compScore){
+            result.textContent = "Tie!";
+        }
+    }
+
 function game(){
 
-    
-    
         var playerSelection = this.value;
         var computerSelection = computerPlay();
 
-         if(roundNum <= 5){
-            playRound(playerSelection, computerSelection);
-            playerChoice.textContent = "player: " + playerSelection;
-            compChoice.textContent = "computer: " + computerSelection;
-         }else{
-             console.log('game over');
-         }
-    
+        if( roundNum < 5){
+        playRound(playerSelection, computerSelection);
+        playerChoice.textContent = "player: " + playerSelection;
+        compChoice.textContent = "computer: " + computerSelection;
+        round.textContent = "Round: " + roundNum;
+        }else{
+            winner();
+            return;
+        }
+        
     
 }
+
+
 
 
 // function game(){
