@@ -39,13 +39,9 @@ rockBtn.textContent = 'rock';
 paperBtn.textContent = 'paper';
 scissorsBtn.textContent = 'scissors';
 
-
-
 container.appendChild(rockBtn);
 container.appendChild(paperBtn);
 container.appendChild(scissorsBtn);
-
-
 
 rockBtn.addEventListener('click', game);
 paperBtn.addEventListener('click', game);
@@ -65,33 +61,30 @@ div.appendChild(score);
 container.appendChild(div);
 
 
-  
+var playerScore = 0;
+var compScore = 0;  
 
 function playRound(playerSelection, computerSelection){
     playerSelection = playerSelection.toLowerCase();
     // if( playerSelection != 'rock' || 'paper' || 'scissors'){
     //     prompt('error please enter rock paper or scissors.');
     // }
-
-    var playerScore = 0;
-    var compScore = 0;
    
     if(playerSelection ==  computerSelection){
-        console.log('tie');
+        score.textContent = 'tie';
     }else if((playerSelection == 'rock' && computerSelection == 'scissors') ||
     (playerSelection == 'paper' && computerSelection == 'rock') ||
     (playerSelection == 'scissors' && computerSelection == 'paper')){
-        console.log("player wins");
         score.textContent = "player wins";
-        playerScore + 1;
+        playerScore ++;
         console.log("player score " + playerScore);
 
     }else if((playerSelection == 'rock' && computerSelection == 'paper') ||
         (playerSelection == 'paper' && computerSelection == 'scissors') ||
         (playerSelection == 'scissors' && computerSelection == 'rock')){
-            console.log("computer wins");
+           
             score.textContent = "computer wins";
-            compScore + 1;
+            compScore ++;
             console.log("comp score " + compScore);
         }
 
@@ -99,7 +92,24 @@ function playRound(playerSelection, computerSelection){
 
     }
 
+
+
+
+function game(){
     
+        var playerSelection = this.value;
+        var computerSelection = computerPlay();
+       
+         playRound(playerSelection, computerSelection);
+         playerChoice.textContent = "player: " + playerSelection;
+         compChoice.textContent = "computer: " + computerSelection;
+        
+         if( playerScore || compScore == 5 ){
+            console.log('game over')
+        }
+    
+}
+
 
 // function game(){
 //     for(i = 0; i < 6; i++){
@@ -116,20 +126,5 @@ function playRound(playerSelection, computerSelection){
 //         }
 //     }
 // }
- 
-
-
-
-function game(){
-    
-        var playerSelection = this.value;
-        var computerSelection = computerPlay();
-       
-         playRound(playerSelection, computerSelection);
-         playerChoice.textContent = "player: " + playerSelection;
-         compChoice.textContent = "player: " + computerSelection;
-        
-    
-}
 
 
