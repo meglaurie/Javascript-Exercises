@@ -4,7 +4,7 @@ const body = document.querySelector('body');
 const btn = document.createElement('button');
 
 var rows = 16;
-var cal = 16;
+var cols = 16;
 
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
@@ -16,7 +16,7 @@ function makeRows(rows, cols) {
  body.appendChild(btn);
 };
 
-makeRows(16, 16);
+makeRows(rows, cols);
 
 for( var i = 0; i < gridItem.length; i++){
     gridItem[0].addEventListener("mouseover", function( event ){
@@ -34,19 +34,17 @@ function newSize(){
 btn.textContent = 'Clear';
 btn.id = "clear";
 
-document.getElementById("clear").addEventListener("click", function() {
+document.getElementById("clear").addEventListener("click", function(rows, cols) {
     let cell = document.getElementsByClassName('grid-item');
     // console.log("before" + container);
     console.log("before" + cell.length);
-    for (let i = 0; i < cell.length; i++) {
+    while (cell.length) {
         // cell[i].style.removeProperty('background');
-        // container.removeChild(cell[i]);
-        container.removeChild(cell[i]).className = "grid-item";
-        console.log("hit");
-        console.log(cell.length);
+        container.removeChild(cell[0]);
     }
     
     newSize();
+    console.log("after" + cell.length);
         
  });
 
