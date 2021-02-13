@@ -4,14 +4,12 @@ const body = document.querySelector('body');
 const btn = document.createElement('button');
 
 
-
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
   container.style.setProperty('--grid-cols', cols);
   for (c = 0; c < (rows * cols); c++) {
     let cell = document.createElement("div");
     container.appendChild(cell).className = "grid-item";
-
   };
  body.appendChild(btn);
 };
@@ -20,7 +18,6 @@ makeRows(16, 16);
 
 for( var i = 0; i < gridItem.length; i++){
     gridItem[0].addEventListener("mouseover", function( event ){
-        // highlight the mouseenter target
         event.target.style.backgroundColor = "black";
        }, false);
 }
@@ -37,5 +34,9 @@ document.getElementById("clear").addEventListener("click", function() {
         cell[i].style.removeProperty('background');
         
     }
+    var newGrid = prompt("Grid Size?");
+    var rows = newGrid;
+    var cols = newGrid;
+    makeRows(rows, cols);
         
  });
