@@ -3,6 +3,8 @@ const gridItem = document.querySelectorAll('div');
 const body = document.querySelector('body');
 const btn = document.createElement('button');
 
+var rows = 16;
+var cal = 16;
 
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
@@ -22,21 +24,31 @@ for( var i = 0; i < gridItem.length; i++){
        }, false);
 }
 
+function newSize(){
+    var newGrid = prompt("Grid Size?");
+    rows = newGrid;
+    cols = newGrid;
+    makeRows(rows, cols);
+ }
 
 btn.textContent = 'Clear';
 btn.id = "clear";
 
-
-
 document.getElementById("clear").addEventListener("click", function() {
-    let cell = container.childNodes;
+    let cell = document.getElementsByClassName('grid-item');
+    // console.log("before" + container);
+    console.log("before" + cell.length);
     for (let i = 0; i < cell.length; i++) {
-        cell[i].style.removeProperty('background');
-        
+        // cell[i].style.removeProperty('background');
+        // container.removeChild(cell[i]);
+        container.removeChild(cell[i]).className = "grid-item";
+        console.log("hit");
+        console.log(cell.length);
     }
-    var newGrid = prompt("Grid Size?");
-    var rows = newGrid;
-    var cols = newGrid;
-    makeRows(rows, cols);
+    
+    newSize();
         
  });
+
+
+ 
