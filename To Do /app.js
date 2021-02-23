@@ -155,6 +155,10 @@ function removeLocalToDos(todo){
 document.addEventListener('DOMContentLoaded', getToDOs);
 const plants = document.querySelectorAll('svg');
 
+const cactus = document.getElementById('cactus');
+const grow = document.getElementById('container');
+
+console.log(cactus.dataset)
 
 function growPlant(){
   let stage = plants.dataset.stage;
@@ -163,3 +167,6 @@ function growPlant(){
       stage = stage + 1;
   }
 }
+
+
+

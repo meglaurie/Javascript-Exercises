@@ -36,15 +36,14 @@ btn.id = "clear";
 
 document.getElementById("clear").addEventListener("click", function(rows, cols) {
     let cell = document.getElementsByClassName('grid-item');
-    // console.log("before" + container);
-    console.log("before" + cell.length);
+
     while (cell.length) {
-        // cell[i].style.removeProperty('background');
+        // cell[0].style.removeProperty('background');
         container.removeChild(cell[0]);
     }
     
     newSize();
-    console.log("after" + cell.length);
+
         
  });
 
