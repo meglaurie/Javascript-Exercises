@@ -137,20 +137,53 @@ select{
   color: orange;
 }
 
-#cactus{
-  transform: scale(0.1);
+#cactus1{
+  width: 500px;
 }
 
-.grow{
+/* .grow{
   animation: grow1 1s ease-in;
 }
 .shrink{
   animation: shrink 1s ease-in;
-}
+} */
 
 @keyframes grow1{
   from{
     transform: scale(0.1);
+  }
+  to{
+    transform: scale(0.3);
+  }
+}
+
+@keyframes grow2{
+  from{
+    transform: scale(0.3);
+  }
+  to{
+    transform: scale(0.5);
+  }
+}
+@keyframes grow3{
+  from{
+    transform: scale(0.3);
+  }
+  to{
+    transform: scale(0.5);
+  }
+}
+@keyframes grow4{
+  from{
+    transform: scale(0.5);
+  }
+  to{
+    transform: scale(0.7);
+  }
+}
+@keyframes grow5{
+  from{
+    transform: scale(0.7);
   }
   to{
     transform: scale(1);

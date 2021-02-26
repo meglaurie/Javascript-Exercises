@@ -59,27 +59,33 @@ function deleteCheck(event){
   }
 
   const cactus = document.getElementById('cactus1');
+  let num = document.querySelectorAll('.completed').length;
+ 
   // Checkmark
   if(item.classList[0] === "complete-button"){
     const todo = item.parentElement;
     todo.classList.toggle('completed');
-    console.log(cactus.style);
-    cactus.style.setProperty('animation', 'grow1 3s ease');
+    console.log(num);
   }
-  if(item.classList[0] !== "complete-button"){
-    console.log(cactus.style);
-    cactus.style.setProperty('animation', 'shrink 3s ease');
+  if(num === 0){
+    cactus.style.transform = 'scale(0.1)';
+    console.log('clicked');
   }
-  // if(todo.classList[0] === "completed"){
-  //   cactus.style.classList.add('grow');
-  //   console.log(cactus);
-  // }
-  // if(todo.classList[0] !== "completed"){
-  //   cactus.style.classList.remove('grow');
-  //   cactus.style.classList.add('shrink');
 
-  //   console.log(cactus);
-  // }
+  console.log(cactus.style)
+  if(num === 1){
+    cactus.style.transform = 'scale(0.2)';
+  }
+  if(num === 2){
+    cactus.style.transform = 'scale(0.4)';
+  }
+  if(num === 3){
+    cactus.style.transform = 'scale(0.6)';
+  }
+  if(num === 4){
+    cactus.style.transform = 'scale(0.8)';
+  }
+  console.log(cactus);
 
 }
 
