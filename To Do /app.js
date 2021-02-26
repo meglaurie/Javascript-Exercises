@@ -69,9 +69,8 @@ function deleteCheck(event){
   }
   if(num === 0){
     cactus.style.transform = 'scale(0.1)';
-    console.log('clicked');
+    cactus.style.opacity = 1;
   }
-
   console.log(cactus.style)
   if(num === 1){
     cactus.style.transform = 'scale(0.2)';
@@ -85,7 +84,7 @@ function deleteCheck(event){
   if(num === 4){
     cactus.style.transform = 'scale(0.8)';
   }
-  console.log(cactus);
+
 
 }
 
