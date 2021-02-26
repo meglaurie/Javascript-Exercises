@@ -136,3 +136,32 @@ select{
   background: #fff;
   color: orange;
 }
+
+#cactus{
+  transform: scale(0.1);
+}
+
+.grow{
+  animation: grow1 1s ease-in;
+}
+.shrink{
+  animation: shrink 1s ease-in;
+}
+
+@keyframes grow1{
+  from{
+    transform: scale(0.1);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+
+@keyframes shrink{
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(0);
+  }
+}

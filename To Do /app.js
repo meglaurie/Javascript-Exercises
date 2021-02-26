@@ -10,6 +10,7 @@ todoButton.addEventListener('click', addToDo);
 todoList.addEventListener('click', deleteCheck);
 filterOption.addEventListener('click', filterToDo);
 
+
 //Functions
 function addToDo(event){
   // Prevent form from submitting
@@ -57,13 +58,32 @@ function deleteCheck(event){
     });
   }
 
+  const cactus = document.getElementById('cactus1');
   // Checkmark
   if(item.classList[0] === "complete-button"){
     const todo = item.parentElement;
     todo.classList.toggle('completed');
+    console.log(cactus.style);
+    cactus.style.setProperty('animation', 'grow1 3s ease');
   }
+  if(item.classList[0] !== "complete-button"){
+    console.log(cactus.style);
+    cactus.style.setProperty('animation', 'shrink 3s ease');
+  }
+  // if(todo.classList[0] === "completed"){
+  //   cactus.style.classList.add('grow');
+  //   console.log(cactus);
+  // }
+  // if(todo.classList[0] !== "completed"){
+  //   cactus.style.classList.remove('grow');
+  //   cactus.style.classList.add('shrink');
+
+  //   console.log(cactus);
+  // }
 
 }
+
+
 
 function filterToDo(e){
   const todos = todoList.childNodes;
@@ -158,15 +178,20 @@ const plants = document.querySelectorAll('svg');
 const cactus = document.getElementById('cactus');
 const grow = document.getElementById('container');
 
-console.log(cactus.dataset)
+// console.log(cactus.dataset)
 
 function growPlant(){
-  let stage = plants.dataset.stage;
-  if(stage < 11){
-      playTimeline(stage);
-      stage = stage + 1;
+  let todos = todoList.childNodes;
+
+  if (saveLocalToDos())
+  if(todos == 0){
+      
+  }
+  if(todos == 1){
+      
   }
 }
 
+// console.log(todoList.childNodes);
 
 
