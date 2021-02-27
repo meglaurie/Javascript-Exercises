@@ -68,24 +68,28 @@ function deleteCheck(event){
     console.log(num);
   }
   if(num === 0){
-    cactus.style.transform = 'translate(20%, 20%) scale(0)';
+    cactus.style.transform = 'translate(20%, 35%) scale(0)';
+
+  }
+  if(num === 1){
+    cactus.style.transform = 'translate(20%, 35%) scale(0.1)';
     cactus.style.opacity = 1;
   }
-  console.log(cactus.style)
-  if(num === 1){
-    cactus.style.transform = 'translate(20%, 20%) scale(0.1)';
-  }
   if(num === 2){
-    cactus.style.transform = 'translate(20%, 20%) scale(0.2)';
+    cactus.style.transform = 'translate(20%, 35%) scale(0.2)';
+ 
   }
   if(num === 3){
-    cactus.style.transform = 'translate(20%, 20%) scale(0.3)';
+    cactus.style.transform = 'translate(20%, 35%) scale(0.3)';
+
   }
   if(num === 4){
-    cactus.style.transform = 'translate(20%, 20%) scale(0.4)';
+    cactus.style.transform = 'translate(20%, 35%) scale(0.4)';
+   
   }
   if(num === 5){
-    cactus.style.transform = 'translate(20%, 20%) scale(0.5)';
+    cactus.style.transform = 'translate(20%, 35%) scale(0.5)';
+  
   }
 
 

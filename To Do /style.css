@@ -14,7 +14,7 @@ body{
 
 
 h1{
-  font-family: font-family: 'Pacifico', cursive;
+ font-family: 'Pacifico', cursive;
 }
 header{
   font-size: 2rem;
@@ -144,10 +144,8 @@ select{
 
 #cactus{
   transition: all 1s ease;
-  transform: scale(0.1);
+  transform-origin: center;
   opacity: 0;
-  /* transform: translate(52%, 67%); */
-  transform-origin: bottom;
   z-index: 3;
 }
 
