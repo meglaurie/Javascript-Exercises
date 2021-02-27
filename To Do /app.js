@@ -58,7 +58,7 @@ function deleteCheck(event){
     });
   }
 
-  const cactus = document.getElementById('cactus1');
+  const cactus = document.getElementById('cactus');
   let num = document.querySelectorAll('.completed').length;
  
   // Checkmark
@@ -68,21 +68,24 @@ function deleteCheck(event){
     console.log(num);
   }
   if(num === 0){
-    cactus.style.transform = 'scale(0.1)';
+    cactus.style.transform = 'scale(0) translate(48%, 50%)';
     cactus.style.opacity = 1;
   }
   console.log(cactus.style)
   if(num === 1){
-    cactus.style.transform = 'scale(0.2)';
+    cactus.style.transform = 'scale(0.2) translate(48%, 50%)';
   }
   if(num === 2){
-    cactus.style.transform = 'scale(0.4)';
+    cactus.style.transform = 'scale(0.4) translate(48%, 50%)';
   }
   if(num === 3){
-    cactus.style.transform = 'scale(0.6)';
+    cactus.style.transform = 'scale(0.6) translate(48%, 50%)';
   }
   if(num === 4){
-    cactus.style.transform = 'scale(0.8)';
+    cactus.style.transform = 'scale(0.8) translate(48%, 50%)';
+  }
+  if(num === 5){
+    cactus.style.transform = 'scale(1) translate(48%, 50%)';
   }
 
 

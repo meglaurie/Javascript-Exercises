@@ -6,8 +6,8 @@
 
 body{
   /* background-image: linear-gradient(120deg, #f6d365, #fea0a5); */
-  background-color: #fea0a5;
-  color:#fff;
+  background-color: #F7EDE2;
+  color:#1D1E18;
   font-family: sans-serif;
   min-height: 100vh;
 }
@@ -32,13 +32,13 @@ form input, form button{
 }
 
 form button{
-  color: #fea0a5;
+  color: #714955;
   background: #fff;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 form button:hover{
-  background: #fea0a5;
+  background: #714955;
   color:#fff;
 }
 
@@ -55,8 +55,9 @@ form button:hover{
 
 .todo{
   margin: 0.5rem;
-  background: #fff;
-  color: #000;
+  background:transparent;
+  border-bottom: 1px solid #714955;
+  color: #333;
   font-size: 1.5rem;
   display: flex;
   justify-content: center;
@@ -70,7 +71,7 @@ form button:hover{
 
 .trash-button,
 .complete-button{
-  background: red;
+  background:transparent;
   color: #fff;
   border: none;
   padding: 1rem;
@@ -79,7 +80,7 @@ form button:hover{
 }
 
 .complete-button{
-  background: green;
+  background: transparent;
 }
 .todo-item{
   padding: 0rem 0.5rem;
@@ -115,7 +116,7 @@ select{
 }
 
 select{
-  color: orange;
+  color: #19647E;
   width: 10rem;
   cursor: pointer;
   padding: 1rem;
@@ -124,7 +125,7 @@ select{
 .select::after{
   content: "<";
   position: absolute;
-  background: yellow;
+  background: #7B886B;
   top: 0;
   right: 0;
   padding: 1rem;
@@ -134,13 +135,17 @@ select{
 
 .select:hover::after{
   background: #fff;
-  color: orange;
+  color: #19647E;
 }
 
-#cactus1{
+#cactus{
   transition: all 1s ease;
   transform: scale(0.1);
   opacity: 0;
+  position: absolute;
+  top: 80%;
+  right: 50%;
+  z-index: 3;
 }
 
 .wrapper{
@@ -149,61 +154,18 @@ select{
   grid-gap: 20px;
 }
 
-
-/* .grow{
-  animation: grow1 1s ease-in;
-}
-.shrink{
-  animation: shrink 1s ease-in;
-} */
-
-@keyframes grow1{
-  from{
-    transform: scale(0.1);
-  }
-  to{
-    transform: scale(0.3);
-  }
+.container2{
+  position: relative;
 }
 
-@keyframes grow2{
-  from{
-    transform: scale(0.3);
-  }
-  to{
-    transform: scale(0.5);
-  }
+#Front{
+  z-index: 99;
 }
-@keyframes grow3{
-  from{
-    transform: scale(0.3);
-  }
-  to{
-    transform: scale(0.5);
-  }
+#Back{
+ z-index: 1;
 }
-@keyframes grow4{
-  from{
-    transform: scale(0.5);
-  }
-  to{
-    transform: scale(0.7);
-  }
-}
-@keyframes grow5{
-  from{
-    transform: scale(0.7);
-  }
-  to{
-    transform: scale(1);
-  }
+#soil{
+  z-index: 2;
 }
 
-@keyframes shrink{
-  from{
-    transform: scale(1);
-  }
-  to{
-    transform: scale(0);
-  }
-}
+
