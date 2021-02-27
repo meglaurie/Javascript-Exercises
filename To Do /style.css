@@ -142,12 +142,19 @@ select{
   color: #19647E;
 }
 
-#cactus{
+#cactus,
+#aloe,
+#succulents,
+#tall-cactus{
   transition: all 1s ease;
   transform-origin: center;
   opacity: 0;
-  z-index: 3;
 }
+
+/* #tall-cactus{
+  transition: all 1s ease;
+  transform-origin: bottom;
+} */
 
 .wrapper{
   display: grid;
@@ -159,14 +166,5 @@ select{
   position: relative;
 }
 
-#Front{
-  z-index: 99;
-}
-#Back{
- z-index: 1;
-}
-#soil{
-  z-index: 2;
-}
 
 
