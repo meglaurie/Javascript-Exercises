@@ -62,6 +62,7 @@ function deleteCheck(event){
   const aloe = document.getElementById('aloe');
   const lents = document.getElementById('succulents');
   const tallCactus = document.getElementById('tall-cactus');
+  const cactusFlower = document.getElementById('Flower-Copy');
   let num = document.querySelectorAll('.completed').length;
  
   // Checkmark
@@ -74,44 +75,47 @@ function deleteCheck(event){
     cactus.style.transform = 'translate(11%, 35%) scale(0)';
     aloe.style.transform = 'translate(57%, 57%) scale(0)';
     lents.style.transform = 'translate(20%, 29%) scale(0)';
-    tallCactus.style.transform = 'translate(10%, 13%) scale(0)';
+    tallCactus.style.transform = 'translate(-5%, 25%) scale(0)';
+    cactusFlower.style.transform = "scale(0)";
 
   }
   if(num === 1){
-    cactus.style.transform = 'translate(11%, 35%) scale(0.1)';
+    cactus.style.transform = 'translate(6%, 35%) scale(0.1)';
     cactus.style.opacity = 1;
-    aloe.style.transform = 'translate(60%, 61%) scale(0.1)';
+    aloe.style.transform = 'translate(50%, 55%) scale(0.1)';
     aloe.style.opacity = 1;
-    lents.style.transform = 'translate(20%, 29%) scale(0.1)';
+    lents.style.transform = 'translate(20%, 32%) scale(0.1)';
     lents.style.opacity = 1;
-    tallCactus.style.transform = 'translate(10%, 13%) scale(0.3)';
+    tallCactus.style.transform = 'translate(-5%, 25%) scale(0.3)';
     tallCactus.style.opacity = 1;
   }
   if(num === 2){
-    cactus.style.transform = 'translate(11%, 35%) scale(0.2)';
-    aloe.style.transform = 'translate(60%, 61%) scale(0.3)';
-    lents.style.transform = 'translate(20%, 29%) scale(0.2)';
-    tallCactus.style.transform = 'translate(10%, 13%) scale(0.6)';
+    cactus.style.transform = 'translate(6%, 35%) scale(0.2)';
+    aloe.style.transform = 'translate(55%, 60%) scale(0.3)';
+    lents.style.transform = 'translate(20%, 32%) scale(0.2)';
+    tallCactus.style.transform = 'translate(3%, 18%) scale(0.6)';
 
  
   }
   if(num === 3){
-    cactus.style.transform = 'translate(11%, 35%) scale(0.3)';
+    cactus.style.transform = 'translate(6%, 35%) scale(0.3)';
     aloe.style.transform = 'translate(60%, 61%) scale(0.4)';
-    lents.style.transform = 'translate(20%, 29%) scale(0.3)';
+    lents.style.transform = 'translate(20%, 32%) scale(0.3)';
     tallCactus.style.transform = 'translate(10%, 13%) scale(0.9)';
 
   }
   if(num === 4){
-    cactus.style.transform = 'translate(11%, 35%) scale(0.4)';
+    cactus.style.transform = 'translate(6%, 35%) scale(0.4)';
     aloe.style.transform = 'translate(60%, 61%) scale(0.5)';
     lents.style.transform = 'translate(20%, 29%) scale(0.4)';
+    cactusFlower.style.transform = "translate(39.5%,17%) scale(0.5) ";
    
   }
   if(num === 5){
-    cactus.style.transform = 'translate(11%, 35%) scale(0.5)';
+    cactus.style.transform = 'translate(6%, 35%) scale(0.5)';
     aloe.style.transform = 'translate(60%, 61%) scale(0.6)';
     lents.style.transform = 'translate(20%, 29%) scale(0.5)';
+    cactusFlower.style.transform = "translate(38%,17%) scale(1)";
   
   }
 
