@@ -15,19 +15,18 @@ body{
 h1{
  font-family: 'Pacifico', cursive;
  text-align: center;
- color: #C8A332;
+ color: #F5D05D;
  margin-bottom: 50px;
 }
 header{
   font-size: 2rem;
 }
 form{
-  min-height: 20vh;
+  min-height: 15vh;
   display: flex;
   justify-content: left;
   align-items: center;
   padding: 0px;
-  margin-top: 15px;
 }
 
 form input, form button{
@@ -179,6 +178,7 @@ select{
   height: 475px;
   border-radius: 14px;
   overflow: scroll;
+  max-width: 500px;
 }
 
 .container2{
@@ -187,3 +187,26 @@ select{
 
 
 
+@media only screen and (max-width: 1200px){
+  .wrapper{
+    display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        box-orient: vertical;
+  }
+  .container1{
+    -webkit-box-ordinal-group: 2;
+        -moz-box-ordinal-group: 2;
+        box-ordinal-group: 2;
+
+  }
+  .container2{
+    -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        box-ordinal-group: 1;
+
+  }
+}

@@ -64,6 +64,9 @@ function deleteCheck(event){
   const tallCactus = document.getElementById('tall-cactus');
   const cactusFlower = document.getElementById('Flower-Copy');
   let num = document.querySelectorAll('.completed').length;
+  // let num = 0;
+
+  console.log(num);
  
   // Checkmark
   if(item.classList[0] === "complete-button"){
