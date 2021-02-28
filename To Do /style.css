@@ -6,25 +6,28 @@
 
 body{
   /* background-image: linear-gradient(120deg, #f6d365, #fea0a5); */
-  background-color: #F7EDE2;
+  background-color:  #003554;
   color:#1D1E18;
   font-family: sans-serif;
   min-height: 100vh;
 }
 
-
 h1{
  font-family: 'Pacifico', cursive;
+ text-align: center;
+ color: #C8A332;
+ margin-bottom: 50px;
 }
 header{
   font-size: 2rem;
 }
-header,form{
+form{
   min-height: 20vh;
   display: flex;
   justify-content: left;
   align-items: center;
-  padding: 10px;
+  padding: 0px;
+  margin-top: 15px;
 }
 
 form input, form button{
@@ -35,15 +38,20 @@ form input, form button{
 
 }
 
+form input{
+  margin-left: 15px;
+  width: 85%;
+}
+
 form button{
-  color: #714955;
-  background: #fff;
+  color: #fff;
+  background: #003554;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 form button:hover{
-  background: #714955;
-  color:#fff;
+  background: #fff;
+  color:#003554;
 }
 
 .to-do-container{
@@ -54,13 +62,14 @@ form button:hover{
 
 .to-do-list{
   min-width: 90%;
+  margin: 0 auto;
   list-style: none;
 }
 
 .todo{
   margin: 0.5rem;
   background:transparent;
-  border-bottom: 1px solid #714955;
+  border-bottom: 1px solid #003554;
   color: #333;
   font-size: 1.5rem;
   display: flex;
@@ -76,7 +85,7 @@ form button:hover{
 .trash-button,
 .complete-button{
   background:transparent;
-  color: #fff;
+  color: #003554;
   border: none;
   padding: 1rem;
   cursor: pointer;
@@ -114,7 +123,7 @@ select{
 }
 
 .select{
-  margin: 1rem;
+  margin: .5rem;
   position: relative;
   overflow: hidden;
 }
@@ -160,6 +169,16 @@ select{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
+  width: 90%;
+  margin: 0 auto; 
+}
+
+.container1{
+  background: #F7EDE2;
+  width: 90%;
+  height: 500px;
+  border-radius: 14px;
+  overflow: scroll;
 }
 
 .container2{
