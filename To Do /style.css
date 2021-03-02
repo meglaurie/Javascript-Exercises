@@ -169,6 +169,7 @@ select{
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   width: 90%;
+  max-width: 90%;
   margin: 0 auto; 
 }
 
@@ -201,12 +202,13 @@ select{
     -webkit-box-ordinal-group: 2;
         -moz-box-ordinal-group: 2;
         box-ordinal-group: 2;
+    margin: 0 auto;
 
   }
   .container2{
     -webkit-box-ordinal-group: 1;
         -moz-box-ordinal-group: 1;
         box-ordinal-group: 1;
-
+    margin: 0 auto;
   }
 }
