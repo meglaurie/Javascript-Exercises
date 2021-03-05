@@ -58,22 +58,43 @@ function deleteCheck(event){
     });
   }
 
+  
+  let num = document.querySelectorAll('.completed').length;
+
+  
+  // let num2[0] = document.querySelectorAll('.completed');
+  console.log(item);
+
+  const todo = item.parentElement;
+  // Checkmark
+  if(item.classList[0] === "complete-button"){
+    todo.classList.toggle('completed');
+    console.log(num);
+  }
+  
+  growPlants(num);
+  console.log(todo);
+  item.addEventListener("clicked", function(){
+    if(todo.classList[1] == 'completed'){
+      num = num + 1;
+    }
+    if(todo.classList[1] != 'completed'){
+      num = num - 1;
+    }
+    console.log('clicked');
+  })
+
+}
+
+
+
+function growPlants(num){
   const cactus = document.getElementById('cactus');
   const aloe = document.getElementById('aloe');
   const lents = document.getElementById('succulents');
   const tallCactus = document.getElementById('tall-cactus');
   const cactusFlower = document.getElementById('Flower-Copy');
-  let num = document.querySelectorAll('.completed').length;
-  // let num = 0;
 
-  console.log(num);
- 
-  // Checkmark
-  if(item.classList[0] === "complete-button"){
-    const todo = item.parentElement;
-    todo.classList.toggle('completed');
-    console.log(num);
-  }
   if(num === 0){
     cactus.style.transform = 'translate(11%, 35%) scale(0)';
     aloe.style.transform = 'translate(57%, 57%) scale(0)';
@@ -112,7 +133,7 @@ function deleteCheck(event){
     aloe.style.transform = 'translate(60%, 61%) scale(0.5)';
     lents.style.transform = 'translate(20%, 29%) scale(0.4)';
     cactusFlower.style.transform = "translate(39.5%,17%) scale(0.5) ";
-   
+    // cactusFlower.style.opacity = 1;
   }
   if(num === 5){
     cactus.style.transform = 'translate(6%, 35%) scale(0.5)';
@@ -121,9 +142,9 @@ function deleteCheck(event){
     cactusFlower.style.transform = "translate(38%,17%) scale(1)";
   
   }
-
-
 }
+
+
 
 
 

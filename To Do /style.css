@@ -150,6 +150,9 @@ select{
   color: #19647E;
 }
 
+#Flower-Copy{
+  transition: all 1s ease;
+}
 #cactus,
 #aloe,
 #succulents,
@@ -185,8 +188,6 @@ select{
 .container2{
   position: relative;
 }
-
-
 
 @media only screen and (max-width: 1200px){
   .wrapper{
